@@ -2,7 +2,7 @@
 
 元大都教學漫遊沙盤，以 Three.js 在瀏覽器呈現體素城市、文獻說明與互動探索。
 
-**線上體驗：** https://eltonq3.github.io/yuan-dadu-voxel/
+**線上體驗：** https://yuan-dadu-voxel.pages.dev/
 
 ## 兩種體驗
 
@@ -39,8 +39,18 @@ python3 -m http.server 8765
 
 - `index.html`：完整應用，包含程式、樣式與動態生成的材質。
 - `Yuandadu_map.jpg`：本專案提供的地理參照圖；亦嵌入 HTML 供查閱。
-- `.nojekyll`：讓 GitHub Pages 直接發布靜態檔案。
+- `.nojekyll`：保留的靜態網站相容檔案，Cloudflare Pages 無需此檔案。
 
-GitHub Pages 使用 `main` 分支的根目錄；更新該分支後，網站會自動重新發布。
+## Cloudflare Pages 發布
+
+正式網站由 Cloudflare Pages 託管，GitHub 保留原始碼並觸發自動部署。
+
+- 專案：`yuan-dadu-voxel`
+- 來源：`EltonQ3/yuan-dadu-voxel` 的 `main` 分支
+- Framework preset：`None`
+- Build command：`exit 0`
+- Build output directory：`.`（儲存庫根目錄）
+
+更新 `main` 分支後，Cloudflare 會自動重新發布。
 
 外部引文、參考圖及第三方函式庫的權利依各自來源；本儲存庫沒有替第三方素材另行授權。
